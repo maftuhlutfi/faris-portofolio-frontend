@@ -24,16 +24,9 @@ const Order = {
             cb(result)
         })
     },
-    addOrderFromUser: (vals, cb) => {
+    addOrderFromCustomer: (vals, cb) => {
         const queryString = `INSERT INTO order (nama_customer, id_user, tipe_order) VALUES (?,?,?);`
         connection.execute(queryString, vals, (err, result) => {
-            if (err) throw err
-            cb(result)
-        })
-    },
-    deleteOrder: (id, cb) => {
-        const queryString = `DELETE FROM order WHERE id=?;`
-        connection.execute(queryString, [id], (err, result) => {
             if (err) throw err
             cb(result)
         })
@@ -45,12 +38,12 @@ const Order = {
             cb(result)
         })
     },
-    addAllDetailOrder: (vals, cb) => {
-        let queryString = `INSERT INTO detail_order VALUES (${vals[0][0]},${vals[0][1]},${vals[0][2]})`
-        vals.forEach(val => {
-            queryString += `, (${val[0]}, ${val[1]}, ${val[2]})`
-        })
-        connection.execute(queryString, (err, result) => {
+    updateOrderDone: (id, cb) => {
+        vals.push(id)
+        const queryString = `UPDATE order
+            SET selesai='Y'
+            WHERE id=?;`
+        connection.execute(queryString, [id], (err, result) => {
             if (err) throw err
             cb(result)
         })
@@ -72,9 +65,9 @@ const Order = {
             cb(result)
         })
     },
-    deleteAllDetailOrder: (idOrder, cb) => {
-        const queryString = `DELETE FROM detail_order
-            WHERE id_order = ?;`
+    deleteOneOrder: (idOrder, cb) => {
+        const queryString = `DELETE FROM order
+            WHERE id = ?;`
         connection.execute(queryString, [idOrder], (err, result) => {
             if (err) throw err
             cb(result)
