@@ -37,7 +37,7 @@ const Product = {
         vals.push()
         vals.push(id)
         const queryString = `UPDATE produk
-            SET nama=?, harga=?, kategori=?, diskon=?, waktu=?, updated_at=CURRENT_TIMESTAMP()
+            SET nama=?, harga=?, kategori=?, diskon=?, foto=?, updated_at=CURRENT_TIMESTAMP()
             WHERE id=?;`
         connection.execute(queryString, vals, (err, result) => {
             if (err) throw err

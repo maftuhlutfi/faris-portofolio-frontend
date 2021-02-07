@@ -10,22 +10,22 @@ const Payment = {
     },
     selectPaymentById: (id, cb) => {
         const queryString = `SELECT *
-            FROM payment
-            WHERE id = ?;`
-        connection.execute(queryString, id, (err, result) => {
+            FROM pembayaran
+            WHERE id_pembayaran = ?;`
+        connection.execute(queryString, [id], (err, result) => {
             if (err) throw err;
             cb(result)
         })
     },
     addPaymentFromCashier: (vals, cb) => {
-        const queryString = `INSERT INTO payment (id_pegawai, id_order, id_cara_bayar) VALUES (?,?,?);`
+        const queryString = `INSERT INTO pembayaran (id_pegawai, id_order, id_cara_bayar, total_bayar) VALUES (?,?,?,?);`
         connection.execute(queryString, vals, (err, result) => {
             if (err) throw err
             cb(result)
         })
     },
     addPaymentFromUser: (vals, cb) => {
-        const queryString = `INSERT INTO payment (id_order, id_cara_bayar) VALUES (?,?);`
+        const queryString = `INSERT INTO pembayaran (id_order, id_cara_bayar, total_bayar) VALUES (?,?,?);`
         connection.execute(queryString, vals, (err, result) => {
             if (err) throw err
             cb(result)
@@ -33,7 +33,7 @@ const Payment = {
     },
     updatePaymentDone: (vals, id, cb) => {
         vals.push(id)
-        const queryString = `UPDATE payment
+        const queryString = `UPDATE pembayaran
             SET pembayar=?, selesai='Y', waktu_bayar=CURRENT_TIMESTAMP()
             WHERE id_pembayaran=?;`
         connection.execute(queryString, vals, (err, result) => {
@@ -42,7 +42,7 @@ const Payment = {
         })
     },
     deleteOne: (id, cb) => {
-        const queryString = `DELETE FROM payment WHERE id_pembayaran=?;`
+        const queryString = `DELETE FROM pembayaran WHERE id_pembayaran=?;`
         connection.execute(queryString, [id], (err, result) => {
             if (err) throw err
             cb(result)

@@ -7,7 +7,7 @@ module.exports = {
     createNewCategory: (req, res) => {
         const value = Object.values(req.body);
         Category.insertOne(value, data => {
-            res.status(200).send(data)
+            res.status(200).send(`Successfully add new category '${req.body.nama}'`)
         })
     },
     // @desc    Get all category
@@ -23,7 +23,7 @@ module.exports = {
     // @access  Public
     getCategoryById: (req, res) => {
         Category.selectCategoryById(req.params.id, data => {
-            res.status(200).send(data)
+            res.status(200).send(data[0])
         })
     },
     // @desc    Update category by id (nama, icon)

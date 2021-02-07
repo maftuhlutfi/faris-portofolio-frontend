@@ -9,15 +9,6 @@ module.exports = {
             res.status(200).send(data)
         })
     },
-    // @desc    Get all product
-    // @route   GET /api/product
-    // @access  Public
-    getAllProductByCategory: (req, res) => {
-        const {categoryId} = req.body;
-        Product.selectAllProductByCategory(categoryId, data => {
-            res.status(200).send(data)
-        })
-    },
     // @desc    Get product by id
     // @route   GET /api/product/:id
     // @access  Public
@@ -26,13 +17,13 @@ module.exports = {
             res.status(200).send(data)
         })
     },
-    // @desc    Add new product (nama, harga, kategori, diskon, foto)
+    // @desc    Add new product (id, nama, harga, kategori, diskon, foto)
     // @route   POST /api/product
     // @access  Private/Admin
     createNewProduct: (req, res) => {
         const value = Object.values(req.body);
         Product.insertOne(value, data => {
-            res.status(200).send(data)
+            res.status(200).send(`Successfully add new product '"${value[0]}"`)
         })
     },
     // @desc    Update product by id (nama, icon)

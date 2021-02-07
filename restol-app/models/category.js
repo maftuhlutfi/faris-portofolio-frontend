@@ -12,7 +12,7 @@ const Category = {
         const queryString = `SELECT *
             FROM kategori
             WHERE id = ?`
-        connection.execute(queryString, id, (err, result) => {
+        connection.execute(queryString, [id], (err, result) => {
             if (err) throw err;
             cb(result)
         })

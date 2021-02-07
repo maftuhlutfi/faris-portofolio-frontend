@@ -12,7 +12,7 @@ const Delivery = {
         const queryString = `SELECT *
             FROM delivery
             WHERE id = ?;`
-        connection.execute(queryString, id, (err, result) => {
+        connection.execute(queryString, [id], (err, result) => {
             if (err) throw err;
             cb(result)
         })
@@ -25,9 +25,8 @@ const Delivery = {
         })
     },
     updateDeliveryDone: (id, cb) => {
-        vals.push(id)
         const queryString = `UPDATE delivery
-            SET selesai=CURRENT_TIMESTAMP()
+            SET waktu_selesai=CURRENT_TIMESTAMP(), selesai='Y'
             WHERE id=?;`
         connection.execute(queryString, [id], (err, result) => {
             if (err) throw err
@@ -35,7 +34,7 @@ const Delivery = {
         })
     },
     deleteOne: (id, cb) => {
-        const queryString = `DELETE FROM delivery WHERE id_pembayaran=?;`
+        const queryString = `DELETE FROM delivery WHERE id=?;`
         connection.execute(queryString, [id], (err, result) => {
             if (err) throw err
             cb(result)

@@ -7,7 +7,7 @@ module.exports = {
     createNewDelivery: (req, res) => {
         const value = Object.values(req.body);
         Delivery.insertOne(value, data => {
-            res.status(200).send(data)
+            res.status(200).send("Successfully add new delivery.")
         })
     },
     // @desc    Get all delivery
@@ -34,7 +34,7 @@ module.exports = {
     // @route   PUT /api/delivery/:id
     // @access  Private
     updateDeliveryDone: (req, res) => {
-        Delivery.updateOne(req.params.id, result => {
+        Delivery.updateDeliveryDone(req.params.id, result => {
             if (result.changedRows === 0) {
                 res.status(204).send("No data found to be updated.")
             } else {

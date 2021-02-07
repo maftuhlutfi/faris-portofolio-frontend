@@ -13,7 +13,7 @@ module.exports = {
         passport.authenticate('login', async (err, user, info) => {
             try {
                 if (err || !user) {
-                    res.status(400).send("Password is incorrect.")
+                    res.status(400).send("Email or password is incorrect.")
                 }
                 req.login(user, { session: false }, async (error) => {
                     if (error) return next(error)
@@ -37,7 +37,7 @@ module.exports = {
             token: req.query.secret_token
         })
     },
-    // @desc    Register a new user
+    // @desc    Register a new user (email, password, tipe)
     // @route   POST /api/user/login
     // @access  Public
     createNewUser: (req, res) => {
