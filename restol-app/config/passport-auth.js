@@ -33,7 +33,7 @@ module.exports = passport => {
     passport.use(
         new JWTstrategy(
           {
-            secretOrKey: 'TOP_SECRET',
+            secretOrKey: process.env.MY_SECRET,
             jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken()
           },
           async (token, done) => {

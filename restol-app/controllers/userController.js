@@ -18,7 +18,7 @@ module.exports = {
                 req.login(user, { session: false }, async (error) => {
                     if (error) return next(error)
 
-                    const token = jwt.sign({ user }, 'TOP_SECRET');
+                    const token = jwt.sign({ user }, process.env.MY_SECRET);
 
                     return res.json({token})
                 })
