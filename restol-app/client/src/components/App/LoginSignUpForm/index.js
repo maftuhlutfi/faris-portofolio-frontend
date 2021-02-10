@@ -1,6 +1,6 @@
-import Title from "../../shared/Title";
+import Title from "../../shared/text/Title";
 import Body from "./Body";
-import Desc from "../../shared/DescTitle"
+import Desc from "../../shared/text/DescTitle"
 import TextInput from "../../shared/input/TextInput";
 import Checkbox from "../../shared/input/CheckBox";
 import StyledButton from "../../shared/StyledButton";
@@ -10,10 +10,12 @@ import StyledLink from "../../shared/StyledLink";
 import words from "./words";
 
 const Form = ({type}) => {
+    const {title, desc, footerDesc, link, href, btnText} = words[type]
+
     return (
         <Body>
-            <Title>{words[type].title}</Title>
-            <Desc>{words[type].desc}</Desc>
+            <Title>{title}</Title>
+            <Desc>{desc}</Desc>
             <InputGroup>
                 <TextInput type='text' placeholder='Email' name='email'/>
                 <TextInput type='password' placeholder='Password' name='password'/>
@@ -23,10 +25,10 @@ const Form = ({type}) => {
                     <StyledLink>Lupa password?</StyledLink>
                 </div>}
             </InputGroup>
-            <StyledButton style={{marginBottom: '20px'}} primary>Masuk</StyledButton>
+            <StyledButton style={{marginBottom: '30px'}} primary>{btnText}</StyledButton>
             <Desc mb='0px'>
-                {words[type].footerDesc} 
-                <StyledLink>{words[type].link}</StyledLink>
+                {footerDesc} 
+                <StyledLink to={href}>{link}</StyledLink>
             </Desc>
         </Body>
     );

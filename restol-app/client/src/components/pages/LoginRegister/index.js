@@ -1,4 +1,4 @@
-import Form from "../../App/Form";
+import Form from "../../App/LoginSignUpForm";
 import Logo from "../../shared/Logo";
 import Wrapper from "./Wrapper";
 

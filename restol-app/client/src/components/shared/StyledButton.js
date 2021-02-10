@@ -37,14 +37,14 @@ const StyledButton = styled.button`
     height: 50px;
     font-weight: 600;
     border-radius: 10px;
-    filter: drop-shadow(0px 10px 20px rgba(255, 36, 84, 0.6));
+    filter: drop-shadow(0px 8px 15px rgba(255, 36, 84, 0.6));
     border: none;
     font-family: "Poppins";
     cursor: pointer;
 
     &:hover {
         transform: translateY(2px);
-        filter: drop-shadow(0px 12px 15px rgba(255, 36, 84, 0.6));
+        filter: drop-shadow(0px 10px 12px rgba(255, 36, 84, 0.6));
     }
 
     ${props => props.sm && size.sm}

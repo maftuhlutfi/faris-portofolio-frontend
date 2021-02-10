@@ -3,13 +3,17 @@ const words = {
         title: "Welcome!",
         desc: "Masuk untuk memesan nikmatnya sajian yang ada di restoran kami",
         footerDesc: "Belum punya akun? ",
-        link: "Daftar disini"
+        link: "Daftar disini",
+        href: "/signup",
+        btnText: "Masuk"
     },
     signup: {
         title: "Daftar Yuk!",
         desc: "Daftar untuk memesan nikmatnya sajian yang ada di restoran kami",
         footerDesc: "Sudah punya akun? ",
-        link: "Login disini"
+        link: "Login disini",
+        href: "/login",
+        btnText: "Daftar"
     }
 }
 
