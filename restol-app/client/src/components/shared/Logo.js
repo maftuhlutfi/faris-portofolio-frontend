@@ -8,14 +8,14 @@ const StyledLogo = styled.span`
 
     font-family: 'Cream Cake';
     font-size: 100px;
-    color: ${props => props.dark ? 'white' : '#332c2c'};
-    margin-bottom: 20px;
+    color: ${props => props.dark ? 'white' : '#FF274A'};
+    margin-bottom: 30px;
 `
 
-const Logo = ({dark}) => {
+const Logo = ({dark, short}) => {
     return (
         <StyledLogo dark={dark}>
-            ResTol
+            {short ? 'R' : 'ResTol'}
         </StyledLogo>
     );
 }
