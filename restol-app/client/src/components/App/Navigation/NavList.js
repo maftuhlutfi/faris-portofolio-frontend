@@ -10,6 +10,16 @@ const Wrapper = styled.div`
     & > *:not(:last-child) {
         margin-bottom: 20px;
     }
+
+    @media (max-width: 600px) {
+        flex-direction: row;
+        flex-grow: 0;
+
+        & > *:not(:last-child) {
+            margin-bottom: 0px;
+            margin-right: 10px;
+        }
+    }
 `
 
 const NavList = () => {
