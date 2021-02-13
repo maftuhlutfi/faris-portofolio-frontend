@@ -8,7 +8,7 @@ const Wrapper = styled.div`
     flex-grow: 1;
 
     & > *:not(:last-child) {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
     @media (max-width: 600px) {
@@ -17,7 +17,6 @@ const Wrapper = styled.div`
 
         & > *:not(:last-child) {
             margin-bottom: 0px;
-            margin-right: 10px;
         }
     }
 `
@@ -25,7 +24,7 @@ const Wrapper = styled.div`
 const NavList = () => {
     return (
         <Wrapper>
-            {menus.map(menu => <NavItem {...menu} />)}
+            {menus.map((menu, index) => <NavItem key={index} {...menu} />)}
         </Wrapper>
     );
 }

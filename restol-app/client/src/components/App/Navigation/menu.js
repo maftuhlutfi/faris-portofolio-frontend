@@ -10,6 +10,11 @@ const menu = [
         link: '/product',
     },
     {
+        nama: 'Orders',
+        icon: 'order.svg',
+        link: '/order'
+    },
+    {
         nama: 'Bills',
         icon: 'bill.svg',
         link: '/payment'

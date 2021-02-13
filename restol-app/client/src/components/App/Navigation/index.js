@@ -6,7 +6,7 @@ import Wrapper from "./Wrapper";
 const Navigation = () => {
     return (
         <Wrapper>
-            <Logo short classname='logo' />
+            <Logo short mb='15px' />
             <NavList />
             <NavItem nama='Logout' icon='logout.svg' classname='logout' />
         </Wrapper>
