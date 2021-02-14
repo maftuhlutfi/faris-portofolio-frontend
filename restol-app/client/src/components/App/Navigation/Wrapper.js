@@ -1,12 +1,11 @@
 import styled from "styled-components";
 
 const Wrapper = styled.aside`
-    width: 180px;
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 30px 10px;
+    padding: 20px;
     background-color: white;
     box-sizing: border-box;
 

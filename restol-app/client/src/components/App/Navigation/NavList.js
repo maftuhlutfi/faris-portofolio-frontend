@@ -8,7 +8,7 @@ const Wrapper = styled.div`
     flex-grow: 1;
 
     & > *:not(:last-child) {
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
 
     @media (max-width: 600px) {

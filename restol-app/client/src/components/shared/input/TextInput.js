@@ -6,7 +6,6 @@ const TextInput = styled.input`
     font-size: 16px;
     color: #5b5b5b;
     padding: 2px 15px;
-    font-family: 'Poppins';
     border-radius: 10px;
 
     &:focus {

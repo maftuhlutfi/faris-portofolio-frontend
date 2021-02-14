@@ -3,9 +3,9 @@ import styled from "styled-components";
 import { ReactSVG } from "react-svg";
 
 const Wrapper = styled(Link)`
-    background-color: ${props => props.active ? '#FF617A' : 'white'};
-    color: ${props => props.active ? 'white' : '#C0C0C0'};
-    padding: 5px 15px;
+    background-color: ${props => props.active === 'true' ? '#FF617A' : 'white'};
+    color: ${props => props.active === 'true' ? 'white' : '#C0C0C0'};
+    padding: 5px 20px;
     border-radius: 20px;
     display: flex;
     flex-direction: row;
@@ -14,13 +14,13 @@ const Wrapper = styled(Link)`
     font-size: 14px;
     width: 120px;
 
-    ${props => props.active && 'box-shadow: 0px 2px 10px rgba(255, 39, 74, 0.5);'};
+    ${props => props.active === 'true' && 'box-shadow: 0px 2px 10px rgba(255, 39, 74, 0.5);'};
 
     svg {
         width: 35px;
 
         path {
-            fill: ${props => props.active ? 'white' : '#C0C0C0'};
+            fill: ${props => props.active === 'true' ? 'white' : '#C0C0C0'};
         }
     }
 
@@ -29,6 +29,7 @@ const Wrapper = styled(Link)`
     }
     span {
         margin-left: 15px;
+        ${props => props.active === 'true' && 'font-weight: 600;'};
     }
 
     @media (max-width: 600px) {
@@ -52,7 +53,7 @@ const NavItem = ({icon, nama, link}) => {
     const location = useLocation();
 
     return (
-        <Wrapper to={link} active={location.pathname === link && 'active'}>
+        <Wrapper to={link} active={location.pathname === link ? 'true' : 'false'}>
             <ReactSVG src={`./assets/icon/${icon}`} />
             <span>{nama}</span>
         </Wrapper>
