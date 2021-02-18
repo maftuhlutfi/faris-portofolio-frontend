@@ -1,26 +1,26 @@
 const menu = [
     {
-        nama: 'Home',
+        name: 'Home',
         icon: 'home.svg',
         link: '/'
     },
     {
-        nama: 'Products',
+        name: 'Products',
         icon: 'product.svg',
         link: '/product',
     },
     {
-        nama: 'Orders',
+        name: 'Orders',
         icon: 'order.svg',
         link: '/order'
     },
     {
-        nama: 'Bills',
+        name: 'Bills',
         icon: 'bill.svg',
         link: '/payment'
     },
     {
-        nama: 'Delivery',
+        name: 'Delivery',
         icon: 'delivery.svg',
         link: '/delivery'
     }

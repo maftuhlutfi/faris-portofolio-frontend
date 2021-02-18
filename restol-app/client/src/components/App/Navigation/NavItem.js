@@ -49,13 +49,13 @@ const Wrapper = styled(Link)`
     }
 `
 
-const NavItem = ({icon, nama, link}) => {
+const NavItem = ({icon, name, link}) => {
     const location = useLocation();
 
     return (
         <Wrapper to={link} active={location.pathname === link ? 'true' : 'false'}>
             <ReactSVG src={`./assets/icon/${icon}`} />
-            <span>{nama}</span>
+            <span>{name}</span>
         </Wrapper>
     );
 }
