@@ -12,6 +12,21 @@ const ProductList = styled.div`
     & > div:not(:last-child) {
         margin-right: 25px;
     }
+
+    @media (max-width: 600px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 20px;
+
+        & > div {
+            margin-bottom: 0;
+        }
+
+        & > div:not(:last-child) {
+            margin-right: 0;
+        }
+    }
 `
 
 export default ProductList

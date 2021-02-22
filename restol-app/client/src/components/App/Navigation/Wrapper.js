@@ -17,6 +17,7 @@ const Wrapper = styled.aside`
         height: auto;
         justify-content: center;
         padding: 10px;
+        z-index: 1;
 
         & > span {
             display: none;

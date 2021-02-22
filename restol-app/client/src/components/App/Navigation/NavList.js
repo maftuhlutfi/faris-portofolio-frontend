@@ -12,8 +12,10 @@ const Wrapper = styled.div`
     }
 
     @media (max-width: 600px) {
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: ${props => `repeat(${props.length}, 1fr)`};
         flex-grow: 0;
+        grid-column-gap: 10px;
 
         & > *:not(:last-child) {
             margin-bottom: 0px;
@@ -23,7 +25,7 @@ const Wrapper = styled.div`
 
 const NavList = () => {
     return (
-        <Wrapper>
+        <Wrapper length={menus.length}>
             {menus.map((menu, index) => <NavItem key={index} {...menu} />)}
         </Wrapper>
     );

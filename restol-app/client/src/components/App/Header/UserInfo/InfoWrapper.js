@@ -5,6 +5,7 @@ const InfoWrapper = styled.div`
     padding: 10px 0;
     flex-direction: column;
     position: absolute;
+    z-index: 5;
     top: 120%;
     right: 1px;
     background-color: white;

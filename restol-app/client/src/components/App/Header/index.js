@@ -12,6 +12,7 @@ const Header = ({title, desc, search}) => {
             <TextInputIcon type='text' placeholder={search} name='search' icon={`./assets/icon/search.svg`} />
             <Cart />
             <UserInfo image='./assets/profile-2.jpg'/>
+            <TextInputIcon type='text' placeholder={search} name='search' icon={`./assets/icon/search.svg`} />
         </HeaderWrapper>
     );
 }

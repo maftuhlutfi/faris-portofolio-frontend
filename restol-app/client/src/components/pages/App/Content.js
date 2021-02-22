@@ -7,8 +7,8 @@ const Content = styled.main`
     overflow-y: scroll;
 
     ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+    width: 6px;
+    height: 6px;
     }
     ::-webkit-scrollbar-button {
     width: 0px;
@@ -37,6 +37,12 @@ const Content = styled.main`
     }
     ::-webkit-scrollbar-corner {
     background: transparent;
+    }
+
+    @media (max-width: 600px) {
+        padding: 30px;
+        padding-bottom: 130px;
+        overflow-y: 
     }
 `
 

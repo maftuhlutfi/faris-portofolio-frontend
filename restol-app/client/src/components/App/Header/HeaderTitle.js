@@ -7,6 +7,10 @@ const Title = styled.span`
     span {
         font-weight: 600;
     }
+
+    @media (max-width: 600px) {
+        font-size: 110%;
+    }
 `
 
 const HeaderTitle = ({title, size}) => {

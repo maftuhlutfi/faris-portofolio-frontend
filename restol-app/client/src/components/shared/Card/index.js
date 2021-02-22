@@ -15,6 +15,13 @@ const Card = styled.div`
 
     ${props => props.width && `width: ${props.width}`};
     height: fit-content;
+
+    @media (max-width: 600px) {
+        box-shadow: 0px 0px 5px ${props => props.bg ? props.bg : 'rgba(0, 0, 0, 0.05)'};
+        &:hover {
+            box-shadow: 0px 0px 5px ${props => props.bg ? props.bg : 'rgba(0, 0, 0, 0.1)'};
+        }
+    }
 `
 
 export default Card

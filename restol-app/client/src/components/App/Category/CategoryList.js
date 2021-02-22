@@ -12,6 +12,11 @@ const CategoryList = styled.div`
     & > div:not(:last-child) {
         margin-right: 25px;
     }
+
+    @media (max-width: 600px) {
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+    }
 `
 
 export default CategoryList

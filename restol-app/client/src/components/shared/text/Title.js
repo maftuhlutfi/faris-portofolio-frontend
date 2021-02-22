@@ -7,6 +7,8 @@ const Title = styled.h1`
     margin-top: 0px;
     margin-bottom: 10px;
     text-align: center;
+
+    
 `;
 
 export default Title;

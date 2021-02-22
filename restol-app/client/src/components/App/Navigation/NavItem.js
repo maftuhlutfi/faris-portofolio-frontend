@@ -33,11 +33,11 @@ const Wrapper = styled(Link)`
     }
 
     @media (max-width: 600px) {
-        width: 19vw;
         font-size: 12px;
         box-sizing: border-box;
         flex-direction: column;
-        padding: 5px;
+        padding: 5px 15px;
+        min-width: 50px;
 
         & > svg {
             width: 20px;
