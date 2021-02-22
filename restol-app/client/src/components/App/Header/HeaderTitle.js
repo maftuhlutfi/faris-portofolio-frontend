@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 const Title = styled.span`
-    font-size: 32px;
+    font-size: ${props => props.size ? props.size : '32px'};
     flex-grow: 1;
 
     span {
@@ -9,10 +9,10 @@ const Title = styled.span`
     }
 `
 
-const HeaderTitle = ({title}) => {
+const HeaderTitle = ({title, size}) => {
     const titleArray = title.split(" ")
     return (
-        <Title>
+        <Title size={size}>
             <span>{titleArray[0]}</span> {titleArray[1]}
         </Title>
     );

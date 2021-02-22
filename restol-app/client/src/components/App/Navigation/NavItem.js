@@ -12,7 +12,7 @@ const Wrapper = styled(Link)`
     text-decoration: none;
     align-items:center;
     font-size: 14px;
-    width: 120px;
+    min-width: 120px;
 
     ${props => props.active === 'true' && 'box-shadow: 0px 2px 10px rgba(255, 39, 74, 0.5);'};
 

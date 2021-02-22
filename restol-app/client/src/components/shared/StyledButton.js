@@ -2,22 +2,22 @@ import styled, { css } from "styled-components";
 
 const size = {
     sm: css`
-        font: 16px;
+        font-size: 16px;
         height: 35px;
     `,
     md: css`
-        font: 18px;
+        font-size: 18px;
         height: 50px;
     `,
     lg: css`
-        font: 24px;
+        font-size: 24px;
         height: 60px;
     `
 }
 
 const color = {
     primary: css`
-        background: #ff2454;
+        background: #FF617A;
         color: white;
     `,
     secondary: css`
@@ -43,8 +43,7 @@ const StyledButton = styled.button`
     cursor: pointer;
 
     &:hover {
-        transform: translateY(2px);
-        filter: drop-shadow(0px 10px 12px rgba(255, 36, 84, 0.6));
+        filter: drop-shadow(0px 8px 15px rgba(255, 36, 84, 0.6)) brightness(95%);
     }
 
     ${props => props.sm && size.sm}

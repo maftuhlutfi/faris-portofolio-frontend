@@ -5,6 +5,11 @@ body,input {
   font-family: -apple-system, 'Poppins', 'Segoe UI', 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #262626;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 code {
