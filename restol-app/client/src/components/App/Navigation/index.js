@@ -8,7 +8,6 @@ const Navigation = () => {
         <Wrapper>
             <Logo short />
             <NavList />
-            <NavItem link='#' name='Logout' icon='logout.svg' classname='logout' />
         </Wrapper>
     );
 }

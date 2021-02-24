@@ -30,7 +30,7 @@ const Price = styled.span`
 
 const ProductItem = ({name, price, foto}) => {
     return (
-        <Card padding='25px' width='150px'>
+        <Card padding='25px' width='155px'>
             <Picture foto={foto} />
             <Name>{name}</Name>
             <Price>Rp. {price}</Price>

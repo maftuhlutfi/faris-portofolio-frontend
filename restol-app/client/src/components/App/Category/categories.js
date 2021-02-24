@@ -18,6 +18,22 @@ const categories = [
     {
         title: 'Kopi',
         icon: 'kopi.svg'
+    },
+    {
+        title: 'Minuman',
+        icon: 'minuman.svg'
+    },
+    {
+        title: 'Kopi',
+        icon: 'kopi.svg'
+    },
+    {
+        title: 'Minuman',
+        icon: 'minuman.svg'
+    },
+    {
+        title: 'Kopi',
+        icon: 'kopi.svg'
     }
 ]
 

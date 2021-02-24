@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const HeaderWrapper = styled.section`
     display: flex;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     padding-left: 10px;
     align-items: center;
 
@@ -21,7 +21,7 @@ const HeaderWrapper = styled.section`
             margin-right: 15px;
         }
         & > span {
-            font-size: 140%;
+            font-size: 130%;
         }
         & > div:nth-child(2) {
             display: none;

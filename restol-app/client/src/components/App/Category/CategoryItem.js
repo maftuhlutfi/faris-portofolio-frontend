@@ -5,7 +5,7 @@ import CategoryIcon from "./CategoryIcon";
 
 const CategoryItem = ({index, active, title, icon, onClick}) => {
     return (
-        <Card onClick={() => onClick(index)} bg={active === index ? '#FFDB6D' : '#fff'}>
+        <Card width='120px' onClick={() => onClick(index)} bg={active === index ? '#FFDB6D' : '#fff'}>
             <CategoryIcon active={active === index ? 'true' : 'false'}>
                 <ReactSVG src={`./assets/icon/${icon}`} />
             </CategoryIcon>

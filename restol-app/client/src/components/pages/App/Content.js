@@ -40,7 +40,7 @@ const Content = styled.main`
     }
 
     @media (max-width: 600px) {
-        padding: 30px;
+        padding: 30px 20px;
         padding-bottom: 130px;
         overflow-y: 
     }

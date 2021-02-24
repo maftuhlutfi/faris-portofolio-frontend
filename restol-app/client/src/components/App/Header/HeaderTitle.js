@@ -3,9 +3,10 @@ import styled from "styled-components"
 const Title = styled.span`
     font-size: ${props => props.size ? props.size : '32px'};
     flex-grow: 1;
+    font-weight: 300;
 
     span {
-        font-weight: 600;
+        font-weight: 500;
     }
 
     @media (max-width: 600px) {
