@@ -6,6 +6,10 @@ const Content = styled.section`
     flex-direction: column;
     padding: 0 10%;
     padding-bottom: 30px;
+
+    @media (max-width: 768px) {
+        margin: 20px 0;
+    }
 `
 
 export default Content

@@ -24,12 +24,20 @@ const Image = styled.div`
     background-size: cover;
     border-radius: 5px;
     margin-bottom: 30px;
+
+    @media (max-width: 768px) {
+        height: 150px;
+    }
 `
 
 const Title = styled.span`
     font-size: 36px;
     font-weight: 600;
     margin-bottom: 25px;
+
+    @media (max-width: 768px) {
+        font-size: 24px;
+    }
 `
 
 const Content = styled.span`
@@ -40,6 +48,10 @@ const Content = styled.span`
 
     a {
         font-weight: 700;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 14px;
     }
 `
 
