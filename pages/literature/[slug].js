@@ -5,6 +5,7 @@ import styled from 'styled-components'
 
 import ReactMarkdown from 'react-markdown'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 const Image = styled.div`
     width: 100%;
@@ -41,7 +42,15 @@ const Button = styled.button`
     }
 `
 
-const Literature = ({post: {image, title, content}}) => {
+const Literature = ({post}) => {
+    const router = useRouter()
+
+    if (router.isFallback) {
+        return <div>Loading...</div>
+    }
+
+    const {image, title, content} = post
+    
     return (
         <>
             <Header />
@@ -64,7 +73,7 @@ const Literature = ({post: {image, title, content}}) => {
 // This function gets called at build time
 export async function getStaticPaths() {
     try {
-        const res = await axios.get(`https://strapi-faris-site.herokuapp.com/posts`)
+        const res = await axios.get(`${process.env.API}/posts`)
         const posts = await res.data
     
         // Get the paths we want to pre-render based on posts
