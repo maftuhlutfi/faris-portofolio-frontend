@@ -64,7 +64,7 @@ const Literature = ({post: {image, title, content}}) => {
 // This function gets called at build time
 export async function getStaticPaths() {
     try {
-        const res = await axios.get(`${process.env.API}/posts`)
+        const res = await axios.get(`https://strapi-faris-site.herokuapp.com/posts`)
         const posts = await res.data
     
         // Get the paths we want to pre-render based on posts
