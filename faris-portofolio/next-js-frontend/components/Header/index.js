@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { useState } from "react"
 import styled from "styled-components"
 import Hamburger from "./Hamburger"
@@ -20,6 +21,10 @@ const Logo = styled.span`
     font-size: 48px;
     font-weight: 600;
 
+    &:hover {
+        cursor: pointer;
+    }
+
     @media (max-width: 768px) {
         font-size: 36px;
     }
@@ -34,7 +39,9 @@ const Header = () => {
 
     return (
         <Wrapper>
-            <Logo>Faris</Logo>
+            <Link href='/'>
+                <Logo>Faris</Logo>
+            </Link>
             <Hamburger handleClick={handleClick} open={show} />
             <NavList show={show} />
         </Wrapper>

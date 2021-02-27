@@ -19,7 +19,6 @@ const Wrapper = styled.a`
 
 const NavItem = ({name, href}) => {
     const router = useRouter()
-    console.log(router.pathname === href)
     return (
         <Link href={href}>
             <Wrapper active={router.pathname == href}>
