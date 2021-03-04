@@ -22,7 +22,7 @@ const Literature = ({categories, posts}) => {
  
 export default Literature;
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     try {
       // GET about categories
       const res = await axios.get(`${process.env.API}/post-categories`)

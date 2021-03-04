@@ -63,7 +63,7 @@ export default function Home({err, posts, photos, content}) {
   )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   try {
     // GET home content
     const rescontent = await axios.get(`${process.env.API}/home`)

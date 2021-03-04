@@ -70,29 +70,11 @@ const Literature = ({post}) => {
     );
 }
 
-// This function gets called at build time
-export async function getStaticPaths() {
-    try {
-        const res = await axios.get(`${process.env.API}/posts`)
-        const posts = await res.data
-    
-        // Get the paths we want to pre-render based on posts
-        const paths = posts.map((post) => ({
-            params: { slug: post.slug },
-        }))
-    
-        // We'll pre-render only these paths at build time.
-        // { fallback: false } means other routes should 404.
-        return { paths, fallback: true }
-    } catch (err) {
-        return { err }
-    }
-}
-
 // This also gets called at build time
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
     // params contains the post `id`.
     // If the route is like /posts/1, then params.id is 1
+    console.log(params)
     const res = await axios.get(`${process.env.API}/posts?slug=${params.slug}`)
     const post = await res.data[0]
 

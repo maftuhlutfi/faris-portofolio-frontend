@@ -17,7 +17,7 @@ const Photograph = ({content}) => {
  
 export default Photograph;
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     try {
       // GET about content
       const rescontent = await axios.get(`${process.env.API}/photographs`)

@@ -25,7 +25,7 @@ const Contact = ({content}) => {
  
 export default Contact;
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     try {
       // GET about content
       const rescontent = await axios.get(`${process.env.API}/contact`)

@@ -23,7 +23,7 @@ const About = ({content}) => {
  
 export default About;
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     try {
       // GET about content
       const rescontent = await axios.get(`${process.env.API}/about`)
